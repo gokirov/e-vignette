@@ -4,13 +4,11 @@
 
 When registration, the user enters their own personal information into the application, which requires the following fields: name, surname, e-mail, and password. When users log in to the application, the user uses their own e-mail address and password. The logout feature is used to exit the application.  
   
-<div align="center">
 | Functional requirements | Non-functional requirements |
 |:-------------|:-------------|
 | Register  | In less than 15 minutes, a notification of successful registration is received |
 | Login  | Logging in takes less than 5 seconds |
 | Session  | The session will end in 3 hour |
-</div>
   
 ## Diagram
 
