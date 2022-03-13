@@ -7,9 +7,9 @@ When registration, the user enters their own personal information into the appli
 <div align="center">
 | Functional requirements | Non-functional requirements |
 |:-------------|:-------------|
-| Register | In less than 15 minutes, a notification of successful registration is received |
-| Login | Logging in takes less than 5 seconds |
-| Session | The session will end in 3 hour |
+| Register  | In less than 15 minutes, a notification of successful registration is received |
+| Login  | Logging in takes less than 5 seconds |
+| Session  | The session will end in 3 hour |
 </div>
   
 ## Diagram

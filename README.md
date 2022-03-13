@@ -21,7 +21,8 @@ an appropriate toll class.
 A valid e-vignette for the correct toll class is mandatory for all motor vehicles with a maximum permissible weight
 of up to 3500 kg when entering a toll road. This means that you need to buy an e-vignette and select the start date
 of its validity before you enter the motorway or expressway.  
-![alt text](https://evinjeta.dars.si/sites/default/files/2021-11/KARTA%20DG%20in%20vinjetni%20sistem%202021_0.png)
+![KARTA DG in vinjetni sistem 2021_0](https://user-images.githubusercontent.com/56564308/158081235-bd8750ad-768c-41ab-919b-02c79357d7b6.png)
+  
 An e-vignette is required for driving on all motorways and expressways operated by DARS, with the exception of certain sections:
 
 -   **The Gorenjska motorway (A2)** – from the direction of Austria to the Hrušica junction in the direction towards Slovenia, and
@@ -34,4 +35,4 @@ An e-vignette is required for driving on all motorways and expressways operated 
 -   **Maribor expressway (H2)** – between Pesnica and Tezno. Due to road recategorisation into the regional road category,
     it is excluded from the e-vignette toll collection system.
   
-[Source:](https://evinjeta.dars.si/en)
+[Source](https://evinjeta.dars.si/en)

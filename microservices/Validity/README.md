@@ -7,12 +7,11 @@ When registration, the user enters their own personal information into the appli
 <div align="center">
 | Functional requirements | Non-functional requirements |
 |:-------------|:-------------|
-| Verifying vignettes purchased at authorized stores | The verification process takes 60 seconds |
-| Examine the viability of vignettes | The examination takes less than 20 seconds |
-| Overview of one license plate's status | The overview takes less than 10 seconds |
+| Verifying vignettes purchased at authorized stores  | The verification process takes 60 seconds |
+| Examine the viability of vignettes  | The examination takes less than 20 seconds |
+| Overview of one license plate's status  | The overview takes less than 10 seconds |
 </div>
    
 ## Diagram
 
-![DDD-User](https://user-images.githubusercontent.com/56564308/158078995-c56cf559-98fd-44a9-ac91-1b032db913c3.jpg)
- 
+![DDD-Validity](https://user-images.githubusercontent.com/56564308/158081344-34cfac9c-8d31-477f-8ec8-dda45b6a9b6b.jpg)

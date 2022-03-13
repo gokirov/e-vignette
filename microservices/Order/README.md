@@ -7,12 +7,11 @@ When a user logs into the system, they can begin ordering a vignette. It accompl
 <div align="center">
 | Functional requirements | Non-functional requirements |
 |:-------------|:-------------|
-| Order execution status | The order is executed in less than 30 s |
-| Enter the registration number | The registration plate must be entered twice to reduce errors. |
-| Selecting the type of e-vignette | The se The user has the option of choosing between (weekly, monthly, annual, semi-annual) |
+| Order execution status  | The order is executed in less than 30 s |
+| Enter the registration number  | The registration plate must be entered twice to reduce errors. |
+| Selecting the type of e-vignette  | The user has the option of choosing between (weekly, monthly, annual, semi-annual) |
 </div>
   
 ## Diagram
 
-![DDD-User](https://user-images.githubusercontent.com/56564308/158078995-c56cf559-98fd-44a9-ac91-1b032db913c3.jpg)
-Selecting the type of e-vignette
+![DDD-Order](https://user-images.githubusercontent.com/56564308/158081327-4ede154f-279e-47c5-8cb6-26aa93dd5b95.jpg)
