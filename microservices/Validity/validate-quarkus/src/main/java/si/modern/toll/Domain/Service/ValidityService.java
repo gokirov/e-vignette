@@ -13,8 +13,8 @@ public class ValidityService {
     @Inject
     ValidityRepository validityRepository;
 
-    public void addVignette(Vignette vignette) {
-        validityRepository.addVignette(vignette);
+    public String addVignette(Vignette vignette) {
+        return validityRepository.addVignette(vignette);
     }
 
     public Boolean checkPlateNumber(String plateNumber) {

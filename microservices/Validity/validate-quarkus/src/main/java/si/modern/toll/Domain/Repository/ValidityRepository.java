@@ -10,6 +10,7 @@ import si.modern.toll.Domain.Entity.Vignette;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @ApplicationScoped
@@ -26,7 +27,7 @@ public class ValidityRepository {
     }
 
 
-    public void addVignette(Vignette vignette) {
+    public String addVignette(Vignette vignette) {
         Document document = new Document()
                 .append("numberPlate", vignette.getNumberPlate())
                 .append("dateFrom", vignette.getDateFrom())
@@ -35,7 +36,7 @@ public class ValidityRepository {
                 .append("locationPurchased", vignette.getLocationPurchased())
                 .append("durationType", vignette.getDurationType())
                 .append("vehicleType", vignette.getVehicleType());
-        getCollectionVignettes().insertOne(document);
+        return getCollectionVignettes().insertOne(document).toString();
     }
 
     public List<Vignette> getAllVignettes() {
@@ -65,8 +66,8 @@ public class ValidityRepository {
                 Document document = cursor.next();
                 if (document.getString("numberPlate").equals(plateNumber)) {
                     vignette.setNumberPlate(document.getString("numberPlate"));
-                    vignette.setDateFrom(document.getDate("dateFrom"));
-                    vignette.setDateTo(document.getDate(document.getString("dateTo")));
+                    vignette.setDateFrom((Date) document.getDate("dateFrom"));
+                    vignette.setDateTo(document.getDate("dateTo"));
                     vignette.setDatePurchased(document.getDate("datePurchased"));
                     vignette.setLocationPurchased(document.getString("locationPurchased"));
                     vignette.setDurationType(Vignette.DurationType.valueOf("durationType"));

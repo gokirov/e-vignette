@@ -15,18 +15,29 @@ public class ValidityController {
     ValidityService validityService;
 
     @POST
-    @Produces(MediaType.TEXT_PLAIN)
-    public String checkPlateNumber(String plateNumber) {
-        return validityService.checkPlateNumber(plateNumber).toString();
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response checkPlateNumber(String plateNumber) {
+        try {
+            Log.info("ValidityController, addVignette, Started with string: " + plateNumber);
+            return Response.ok().entity(validityService.checkPlateNumber(plateNumber)).build();
+        } catch (Exception e) {
+            Log.info("ValidityController, checkPlateNumber, Error: " + e);
+            return Response.status(500).build();
+        }
     }
 
     @Path("/add")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public String addVignette(Vignette vignette) {
-        //Vignette vignette = new Vignette();
-        validityService.addVignette(vignette);
-        return "Successful";
+    public Response addVignette(Vignette vignette) {
+        try {
+            Log.info("ValidityController, addVignette, Started with object: " + vignette);
+            return Response.ok().entity(validityService.addVignette(vignette)).build();
+        } catch (Exception e) {
+            Log.info("ValidityController, addVignette, Error: " + e);
+            return Response.status(500).build();
+        }
     }
 }
