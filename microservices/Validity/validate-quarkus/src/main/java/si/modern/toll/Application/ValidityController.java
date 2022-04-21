@@ -15,10 +15,9 @@ public class ValidityController {
     ValidityService validityService;
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
     public Response checkPlateNumber(String plateNumber) {
         try {
+            System.out.println("SAOKD " + plateNumber);
             Log.info("ValidityController, addVignette, Started with string: " + plateNumber);
             return Response.ok().entity(validityService.checkPlateNumber(plateNumber)).build();
         } catch (Exception e) {

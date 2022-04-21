@@ -23,13 +23,13 @@ public class ValidityService {
 
         if (vignette.getNumberPlate() != null) {
             validity.setNumberPlate(vignette.getNumberPlate());
-            validity.setDateFrom(vignette.getDateTo());
+            validity.setDateFrom(vignette.getDateFrom());
             validity.setDateTo(vignette.getDateTo());
             validity.setDateChecked(new Date());
             long timeDiff = vignette.getDateTo().getTime() - vignette.getDateFrom().getTime();
             int daysDiff = (int) (timeDiff / (1000 * 60 * 60 * 24));
-            System.out.println("AASA: " + daysDiff);
             validity.setDaysRemained(daysDiff);
+            System.out.println("Days left:" + daysDiff);
             validity.setValid(daysDiff > 0);
             validityRepository.setValidity(validity);
             return validity.getValid();

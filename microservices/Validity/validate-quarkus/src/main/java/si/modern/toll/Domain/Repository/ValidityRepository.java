@@ -51,8 +51,8 @@ public class ValidityRepository {
                 vignette.setDateTo(document.getDate(document.getString("dateTo")));
                 vignette.setDatePurchased(document.getDate("datePurchased"));
                 vignette.setLocationPurchased(document.getString("locationPurchased"));
-                vignette.setDurationType(Vignette.DurationType.valueOf("durationType"));
-                vignette.setVehicleType(Vignette.VehicleType.valueOf("vehicleType"));
+                vignette.setDurationType(document.getString("durationType"));
+                vignette.setVehicleType(document.getString("vehicleType"));
                 list.add(vignette);
             }
         }
@@ -66,12 +66,12 @@ public class ValidityRepository {
                 Document document = cursor.next();
                 if (document.getString("numberPlate").equals(plateNumber)) {
                     vignette.setNumberPlate(document.getString("numberPlate"));
-                    vignette.setDateFrom((Date) document.getDate("dateFrom"));
+                    vignette.setDateFrom(document.getDate("dateFrom"));
                     vignette.setDateTo(document.getDate("dateTo"));
                     vignette.setDatePurchased(document.getDate("datePurchased"));
                     vignette.setLocationPurchased(document.getString("locationPurchased"));
-                    vignette.setDurationType(Vignette.DurationType.valueOf("durationType"));
-                    vignette.setVehicleType(Vignette.VehicleType.valueOf("vehicleType"));
+                    vignette.setDurationType(document.getString("durationType"));
+                    vignette.setVehicleType(document.getString("vehicleType"));
                     break;
                 }
             }

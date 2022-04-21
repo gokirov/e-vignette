@@ -15,6 +15,8 @@ public class ValidityControllerTest {
                 .contentType("text/plain").body("AB123CA")
                 .when().post("/validate")
                 .then()
-                .statusCode(200);
+                .statusCode(200)
+                .body(is("true"));
+        ;
     }
 }

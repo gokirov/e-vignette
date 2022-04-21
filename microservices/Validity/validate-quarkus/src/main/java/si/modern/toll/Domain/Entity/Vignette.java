@@ -3,26 +3,19 @@ package si.modern.toll.Domain.Entity;
 import java.util.Date;
 
 public class Vignette {
-    public enum DurationType {
-        weekly, monthly, semiAnnual, annual
-    }
-
-    public enum VehicleType {
-        one, twoA, twoB
-    }
 
     private String numberPlate;
     private Date dateFrom;
     private Date dateTo;
     private Date datePurchased;
     private String locationPurchased;
-    private DurationType durationType;
-    private VehicleType vehicleType;
+    private String durationType;
+    private String vehicleType;
 
     public Vignette() {
     }
 
-    public Vignette(String numberPlate, Date dateFrom, Date dateTo, Date datePurchased, String locationPurchased, DurationType durationType, VehicleType vehicleType) {
+    public Vignette(String numberPlate, Date dateFrom, Date dateTo, Date datePurchased, String locationPurchased, String durationType, String vehicleType) {
         this.numberPlate = numberPlate;
         this.dateFrom = dateFrom;
         this.dateTo = dateTo;
@@ -72,19 +65,19 @@ public class Vignette {
         this.locationPurchased = locationPurchased;
     }
 
-    public DurationType getDurationType() {
+    public String getDurationType() {
         return durationType;
     }
 
-    public void setDurationType(DurationType durationType) {
+    public void setDurationType(String durationType) {
         this.durationType = durationType;
     }
 
-    public VehicleType getVehicleType() {
+    public String getVehicleType() {
         return vehicleType;
     }
 
-    public void setVehicleType(VehicleType vehicleType) {
+    public void setVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
     }
 
