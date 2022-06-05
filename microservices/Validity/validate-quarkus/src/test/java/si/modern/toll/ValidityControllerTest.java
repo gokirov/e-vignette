@@ -12,7 +12,8 @@ public class ValidityControllerTest {
     @Test
     public void testValidateEndpointCheckVignette() {
         given()
-                .contentType("text/plain").body("AB123CA")
+                .contentType("tex" +
+                        "t/plain").body("AB123CA")
                 .when().post("/validate")
                 .then()
                 .statusCode(200)
